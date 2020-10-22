@@ -8,6 +8,7 @@ sudo apt install -y \
             network-manager network-manager-openvpn network-manager-pptp openvpn iptables-persistent \
             pulseaudio pulseaudio-module-bluetooth pulseaudio-utils \
             kitty pcmanfm \
+            ubuntu-restricted-extras \
             git nano mc wget curl make gcc g++ build-essential x11-apps coreutils net-tools blueman \
             python3 python3-pip
 
