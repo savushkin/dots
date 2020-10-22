@@ -226,6 +226,7 @@ for_window [class="zoom"] floating enable
 
 # STARTUP
 
+exec --no-startup-id udiskie --automount --notify --smart-tray
 exec --no-startup-id compton -b
 
 exec_always --no-startup-id feh --bg-scale $HOME/.config/background.jpg

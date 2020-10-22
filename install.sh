@@ -7,7 +7,7 @@ sudo apt install -y \
             language-pack-en language-pack-en-base language-pack-ru language-pack-ru-base \
             network-manager network-manager-openvpn network-manager-pptp openvpn iptables-persistent \
             pulseaudio pulseaudio-module-bluetooth pulseaudio-utils \
-            kitty pcmanfm \
+            kitty pcmanfm udiskie \
             ubuntu-restricted-extras \
             git nano mc wget curl make gcc g++ build-essential x11-apps coreutils net-tools blueman \
             python3 python3-pip
