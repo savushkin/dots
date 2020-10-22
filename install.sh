@@ -14,7 +14,6 @@ sudo apt upgrade -y
 sudo apt install -y \
             language-pack-en language-pack-en-base language-pack-ru language-pack-ru-base \
             openvpn iptables-persistent \
-            network-manager network-manager-gnome \
             pulseaudio pulseaudio-module-bluetooth pulseaudio-utils \
             kitty pcmanfm udiskie \
             ubuntu-drivers-common ubuntu-restricted-extras \
@@ -22,6 +21,8 @@ sudo apt install -y \
             python3 python3-pip \
             lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings \
             xorg xserver-xorg i3 mesa-utils mesa-utils-extra compton rofi feh scrot imagemagick dunst libnotify-bin
+
+sudo apt install --install-suggests --no-install-recommends -y network-manager-gnome
 
 sudo pip3 install pywal
 
