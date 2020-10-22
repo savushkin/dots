@@ -1,5 +1,13 @@
 #!/bin/bash
 
+SUDOERS_PATH="/etc/sudoers.d/01-${USER}"
+
+if sudo [ ! -f "${SUDOERS_PATH}" ]
+then
+echo "${USER} ALL=(ALL) NOPASSWD:ALL" | sudo tee "${SUDOERS_PATH}"
+sudo chmod 440 "${SUDOERS_PATH}"
+fi
+
 sudo apt update
 sudo apt upgrade -y
 
@@ -9,13 +17,14 @@ sudo apt install -y \
             network-manager network-manager-gnome \
             pulseaudio pulseaudio-module-bluetooth pulseaudio-utils \
             kitty pcmanfm udiskie \
-            ubuntu-restricted-extras \
+            ubuntu-drivers-common ubuntu-restricted-extras \
             git nano mc wget curl make gcc g++ build-essential x11-apps coreutils net-tools blueman \
             python3 python3-pip \
             lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings \
-            xorg xserver-xorg i3 ubuntu-drivers-common mesa-utils mesa-utils-extra compton rofi feh scrot imagemagick
+            xorg xserver-xorg i3 mesa-utils mesa-utils-extra compton rofi feh scrot imagemagick dunst libnotify-bin
 
 sudo pip3 install pywal
+
 sudo iptables -t mangle -A POSTROUTING -j TTL --ttl-set 65
 sudo iptables-save --file /etc/iptables/rules.v4
 
@@ -26,17 +35,26 @@ done
 
 sudo update-alternatives --set x-terminal-emulator "$(which kitty)"
 
-rm -rf "${HOME}/.config/dunst"
+DOTS_DIR=$(realpath .)
+
+sudo rm -rf \
+"${HOME}/.bash_aliases" \
+"${HOME}/.bashrc" \
+"${HOME}/.config/dunst" \
+"/etc/lightdm/lightdm-gtk-greeter.conf"
+
 mkdir -p "${HOME}/.config/dunst"
-ln -s "${HOME}/.cache/wal/dunstrc" "${HOME}/.config/dunst/dunstrc"
 
 sudo mkdir -p /etc/lightdm
-sudo rm -f /etc/lightdm/lightdm-gtk-greeter.conf
-sudo ln -s "$(realpath .)/lightdm-gtk-greeter.conf" /etc/lightdm/lightdm-gtk-greeter.conf
 
-for FILE in $(find ./config ! -path ./config | xargs realpath)
+ln -s "${HOME}/.cache/wal/dunstrc" "${HOME}/.config/dunst/dunstrc"
+ln -s "${DOTS_DIR}/bashrc.sh" "${HOME}/.bashrc"
+ln -s "${DOTS_DIR}/bash_aliases.sh" "${HOME}/.bash_aliases"
+sudo ln -s "${DOTS_DIR}/lightdm-gtk-greeter.conf" "/etc/lightdm/lightdm-gtk-greeter.conf"
+
+for FILE in $(find "${DOTS_DIR}/config" ! -path "${DOTS_DIR}/config")
 do
-  CONFIG_FILE=${FILE/$(realpath .)\/config/${HOME}\/.config}
+  CONFIG_FILE=${FILE/${DOTS_DIR}\/config/${HOME}\/.config}
   echo "${CONFIG_FILE}"
   if [ -d "${FILE}" ]
   then

@@ -229,9 +229,9 @@ for_window [class="zoom"] floating enable
 exec --no-startup-id udiskie --automount --notify --smart-tray
 exec --no-startup-id compton -b
 
-exec_always --no-startup-id feh --bg-scale $HOME/.config/background.jpg
+exec_always --no-startup-id $HOME/.config/bin/feh-launch.sh
 exec_always --no-startup-id $HOME/.config/bin/polybar-launch.sh
-exec_always --no-startup-id wal -i ~/.config/background.jpg -a "alpha"
+exec_always --no-startup-id $HOME/.config/bin/wal-launch.sh
 
 # exec --no-startup-id dunst
 exec --no-startup-id nm-applet
