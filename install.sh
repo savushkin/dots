@@ -12,7 +12,7 @@ sudo apt install -y \
             ubuntu-restricted-extras \
             git nano mc wget curl make gcc g++ build-essential x11-apps coreutils net-tools blueman \
             python3 python3-pip \
-            lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+            lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings \
             xorg xserver-xorg i3 ubuntu-drivers-common mesa-utils mesa-utils-extra compton rofi feh scrot imagemagick
 
 sudo pip3 install pywal
