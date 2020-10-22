@@ -41,13 +41,15 @@ ln -s "${HOME}/.cache/wal/dunstrc" "${HOME}/.config/dunst/dunstrc"
 
 for FILE in $(find ./config ! -path ./config | xargs realpath)
 do
-  CONFIG_FILE=${FILE/${HOME}\/dots\/config/${HOME}\/.config}
-
+  CONFIG_FILE=${FILE/$(realpath .)\/config/${HOME}\/.config}
+  echo "${CONFIG_FILE}"
   if [ -d "${FILE}" ]
   then
+    echo "renew directory: ${CONFIG_FILE}"
     rm -rf "${CONFIG_FILE}"
     mkdir -p "${CONFIG_FILE}"
   else
+    echo "create symlink for: ${CONFIG_FILE}"
     rm -f "${CONFIG_FILE}"
     ln -s "${FILE}" "${CONFIG_FILE}"
   fi
