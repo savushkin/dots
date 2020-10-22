@@ -30,6 +30,10 @@ rm -rf "${HOME}/.config/dunst"
 mkdir -p "${HOME}/.config/dunst"
 ln -s "${HOME}/.cache/wal/dunstrc" "${HOME}/.config/dunst/dunstrc"
 
+sudo mkdir -p /etc/lightdm
+sudo rm -f /etc/lightdm/lightdm-gtk-greeter.conf
+sudo ln -s "$(realpath .)/lightdm-gtk-greeter.conf" /etc/lightdm/lightdm-gtk-greeter.conf
+
 for FILE in $(find ./config ! -path ./config | xargs realpath)
 do
   CONFIG_FILE=${FILE/$(realpath .)\/config/${HOME}\/.config}
