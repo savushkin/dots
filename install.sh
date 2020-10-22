@@ -3,18 +3,30 @@
 sudo apt update
 sudo apt upgrade -y
 
-sudo apt install -y language-pack-en language-pack-en-base language-pack-ru language-pack-ru-base
-sudo apt install -y network-manager network-manager-openvpn network-manager-pptp openvpn
-sudo apt install -y pulseaudio pulseaudio-module-bluetooth pulseaudio-utils
-
-sudo apt install -y git nano mc wget curl make gcc g++ build-essential x11-apps coreutils net-tools blueman
-
-sudo apt install -y python3 python3-pip
+sudo apt install -y \
+            language-pack-en language-pack-en-base language-pack-ru language-pack-ru-base \
+            network-manager network-manager-openvpn network-manager-pptp openvpn iptables-persistent \
+            pulseaudio pulseaudio-module-bluetooth pulseaudio-utils \
+            kitty pcmanfm \
+            git nano mc wget curl make gcc g++ build-essential x11-apps coreutils net-tools blueman \
+            python3 python3-pip
 
 sudo pip3 install pywal
 
-#sudo apt install -y lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+if dpkg-query -W "gdm3"
+then
+	echo "gdm3 is already installed";
+	echo "lightdm installation skipped";
+else
+	echo "lightdm installation";
+
+	sudo apt install -y lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+fi
+
 sudo apt install -y xorg xserver-xorg i3 ubuntu-drivers-common mesa-utils mesa-utils-extra compton rofi feh scrot imagemagick
+
+sudo iptables -t mangle -A POSTROUTING -j TTL --ttl-set 65
+sudo iptables-save --file /etc/iptables/rules.v4
 
 for INSTALL_SCRIPT in ./scripts/install-*.sh
 do
