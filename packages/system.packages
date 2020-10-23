@@ -19,6 +19,6 @@ blueman
 python3
 python3-pip
 network-manager
-network-manager-gnome-
+network-manager-gnome
 network-manager-pptp
 network-manager-openvpn

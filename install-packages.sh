@@ -7,13 +7,7 @@ apt upgrade -y
 
 while read -u3 PACKAGE
 do
-  echo "$PACKAGE"
-
-  if apt install -y "${PACKAGE}"
-  then
-    read -n 1 -p "${PACKAGE} package have problems, continue?"
-  fi
-
+  apt install --no-install-recommends --yes "${PACKAGE}"
 done 3< <(cat packages/*.packages | sort | uniq)
 
 pip3 install pywal
