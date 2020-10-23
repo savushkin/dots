@@ -1,0 +1,10 @@
+x11-apps
+lightdm
+lightdm-gtk-greeter
+lightdm-gtk-greeter-settings
+xorg
+xserver-xorg
+i3
+mesa-utils
+mesa-utils-extra
+compton
