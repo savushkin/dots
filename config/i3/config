@@ -227,7 +227,7 @@ for_window [class="zoom"] floating enable
 # STARTUP
 
 exec --no-startup-id udiskie --automount --notify --smart-tray
-exec --no-startup-id compton -b
+# exec --no-startup-id compton -b
 
 exec_always --no-startup-id $HOME/.config/bin/feh-launch.sh
 exec_always --no-startup-id $HOME/.config/bin/polybar-launch.sh
