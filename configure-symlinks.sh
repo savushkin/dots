@@ -17,7 +17,7 @@ ln -s "${HOME}/.cache/wal/dunstrc" "${HOME}/.config/dunst/dunstrc"
 ln -s "${DOTS_DIR}/bashrc.sh" "${HOME}/.bashrc"
 ln -s "${DOTS_DIR}/bash_aliases.sh" "${HOME}/.bash_aliases"
 sudo ln -s "${DOTS_DIR}/lightdm-gtk-greeter.conf" "/etc/lightdm/lightdm-gtk-greeter.conf"
-sudo cp "${DOTS_DIR}/config/systemd.desktop" "/usr/share/xsessions/systemd.desktop"
+sudo ln -s "${DOTS_DIR}/config/xsessions/systemd.desktop" "/usr/share/xsessions/systemd.desktop"
 
 for FILE in $(find "${DOTS_DIR}/config" ! -path "${DOTS_DIR}/config")
 do
