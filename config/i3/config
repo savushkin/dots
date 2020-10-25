@@ -210,6 +210,10 @@ for_window [class="^.*"] border none
 for_window [class="jetbrains-toolbox"] floating enable
 for_window [class="zoom"] floating enable
 
+# SYSTEMD NOTIFY
+
+exec_always --no-startup-id systemd-notify --ready
+
 # STARTUP
 
 # exec --no-startup-id udiskie --automount --notify --smart-tray
