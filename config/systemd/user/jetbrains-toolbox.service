@@ -5,7 +5,7 @@ Requires=polybar.service
 PartOf=polybar.service
 
 [Service]
-ExecStart=/usr/local/bin/jetbrains-toolbox
+ExecStart=%h/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox
 
 [Install]
 WantedBy=tray.target
