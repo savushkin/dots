@@ -5,6 +5,8 @@ lightdm-gtk-greeter-settings
 xorg
 xserver-xorg
 i3
+dunst
 mesa-utils
 mesa-utils-extra
 compton
+polybar
