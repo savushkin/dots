@@ -6,7 +6,7 @@ Requires=wm.target
 [Service]
 Type=notify
 NotifyAccess=all
-ExecStart=/usr/bin/i3
+ExecStart=/usr/bin/i3-with-shmlog
 SuccessExitStatus=143
 
 # Returns exist code 1 because i3-msg does not get a response
