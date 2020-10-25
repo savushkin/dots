@@ -2,6 +2,7 @@
 
 [ "$(id -u)" != "0" ] && exec sudo "$0" "$@"
 
+export DOCKER_USER=$1
 SUDO_USER=$1
 
 SUDOERS_PATH="/etc/sudoers.d/01-${SUDO_USER}"

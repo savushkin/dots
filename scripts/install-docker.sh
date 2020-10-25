@@ -9,6 +9,6 @@ else
 	echo "${PACKAGE} installation";
 
 	wget -qO- https://get.docker.com/ | sh
-	sudo usermod -aG docker "${USER}"
+	sudo usermod -aG docker "${DOCKER_USER}"
 	sudo apt install -y docker-compose
 fi
