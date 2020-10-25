@@ -20,8 +20,6 @@ primary = ${xrdb:color1:#F2A365}
 secondary = ${xrdb:color2:#52796F}
 alert = ${xrdb:color3:#d54062}
 
-include-file = $HOME/.config/polybar/modules
-
 [bar/top]
 monitor = ${env:POLYBAR_MONITOR:DP-0}
 width = 100%
@@ -56,7 +54,7 @@ modules-left = i3
 modules-center = xwindow
 modules-right = temperature memory cpu wlan xkeyboard pulseaudio eth battery date
 
-wm-restack = i3
+;wm-restack = i3
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
 ;cursor-click = pointer
@@ -65,7 +63,8 @@ wm-restack = i3
 ;override-redirect = true
 
 [bar/top-tray]
-inherits = bar/top
+inherit = bar/top
+
 tray-position = right
 tray-padding = 2
 ;tray-detached = false
@@ -75,6 +74,8 @@ tray-padding = 2
 ;tray-offset-y = 0
 ;tray-padding = 6
 ;tray-scale = 1.0
+
+include-file = $HOME/.config/polybar/modules
 
 [settings]
 screenchange-reload = true

@@ -8,7 +8,7 @@ After=i3wm.service
 
 [Service]
 Environment=POLYBAR_MONITOR=%i
-ExecStart=/usr/local/bin/polybar --log=trace top-tray
+ExecStart=/usr/local/bin/polybar top-tray
 ExecReload=/usr/local/bin/polybar --reload top-tray
 
 [Install]
