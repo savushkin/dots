@@ -2,6 +2,8 @@
 
 [ "$(id -u)" != "0" ] && exec sudo "$0" "$@"
 
+export DOCKER_USER=$1
+
 apt update
 apt upgrade -y
 
