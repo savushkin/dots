@@ -7,4 +7,4 @@ PartOf=i3wm.service
 ExecStart=/usr/bin/compton
 
 [Install]
-WantedBy=i3wm.service
+WantedBy=wm.target
