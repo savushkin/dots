@@ -1,8 +1,16 @@
 #!/bin/bash
 
-killall -q polybar
+MONITORS=$(xrandr -q | grep -w connected | cut -d ' ' -f 1)
+PRIMARY_MONITOR=$(xrandr -q | grep -w primary | cut -d ' ' -f 1)
 
-while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
-
-polybar top -r &
-
+for MONITOR in ${MONITORS}
+do
+    if [ "${PRIMARY_MONITOR}" == "${MONITOR}" ]
+    then
+        echo "Start polybar-top-tray@${MONITOR}"
+        systemctl --user start "polybar-top-tray@${MONITOR}.service"
+    else
+        echo "Start polybar-top@${MONITOR}"
+        systemctl --user start "polybar-top@${MONITOR}.service"
+    fi
+done

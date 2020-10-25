@@ -19,16 +19,9 @@ foreground-alt = ${xrdb:color7:#30475E}
 primary = ${xrdb:color1:#F2A365}
 secondary = ${xrdb:color2:#52796F}
 alert = ${xrdb:color3:#d54062}
-;background = #222831
-;background-alt = #30475E
-;foreground = #F9FBEF
-;foreground-alt = #EDF3CE
-;primary = #F2A365
-;secondary = #52796F
-;alert = #d54062
 
 [bar/top]
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = ${env:POLYBAR_MONITOR:DP-0}
 width = 100%
 height = 30
 ;offset-x = 3%
@@ -40,7 +33,7 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 3
-line-color = #f00
+line-color = ${colors.background}
 
 border-size = 4
 border-color = #00000000
@@ -57,13 +50,9 @@ font-2 = FontAwesome:style=Regular:size=14;4
 font-3 = FontAwesome:style=Regular:size=14;4
 font-4 = Roboto:pixelsize=10;1
 
-
 modules-left = i3
 modules-center = xwindow
 modules-right = temperature memory cpu wlan xkeyboard pulseaudio eth battery date
-
-tray-position = right
-tray-padding = 2
 
 wm-restack = i3
 ;scroll-up = i3wm-wsnext
@@ -72,6 +61,18 @@ wm-restack = i3
 ;cursor-scroll = ns-resize
 
 ;override-redirect = true
+
+[bar/top-tray]
+inherits = bar/top
+tray-position = right
+tray-padding = 2
+tray-detached = false
+tray-maxsize = 16
+tray-background = ${colors.background}
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 6
+tray-scale = 1.0
 
 include-file = $HOME/.config/polybar/modules
 

@@ -1,0 +1,12 @@
+[Unit]
+Description=Wallpaper for i3
+Requires=i3wm.service
+After=i3wm.service
+
+[Service]
+ExecStart=%h/.config/bin/feh-launch.sh
+Type=oneshot
+RemainAfterExit=false
+
+[Install]
+WantedBy=i3wm.service
