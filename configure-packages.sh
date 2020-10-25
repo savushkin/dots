@@ -12,6 +12,8 @@ then
   chmod 440 "${SUDOERS_PATH}"
 fi
 
+timedatectl set-timezone 'Europe/Moscow'
+
 update-alternatives --set x-terminal-emulator "$(which kitty)"
 
 iptables -t mangle -A POSTROUTING -j TTL --ttl-set 65
