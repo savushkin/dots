@@ -66,13 +66,13 @@ wm-restack = i3
 inherits = bar/top
 tray-position = right
 tray-padding = 2
-tray-detached = false
-tray-maxsize = 16
-tray-background = ${colors.background}
-tray-offset-x = 0
-tray-offset-y = 0
-tray-padding = 6
-tray-scale = 1.0
+;tray-detached = false
+;tray-maxsize = 16
+;tray-background = ${colors.background}
+;tray-offset-x = 0
+;tray-offset-y = 0
+;tray-padding = 6
+;tray-scale = 1.0
 
 include-file = $HOME/.config/polybar/modules
 
