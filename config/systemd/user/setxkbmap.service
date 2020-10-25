@@ -1,0 +1,10 @@
+[Unit]
+Description=Layout Switcher for X11
+Requires=i3wm.service
+PartOf=i3wm.service
+
+[Service]
+ExecStart=/usr/bin/setxkbmap "us,ru" ",winkeys" "grp:alt_shift_toggle"
+
+[Install]
+WantedBy=i3wm.service

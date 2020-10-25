@@ -216,18 +216,5 @@ exec_always --no-startup-id systemd-notify --ready
 
 # STARTUP
 
-# exec --no-startup-id udiskie --automount --notify --smart-tray
-# exec --no-startup-id compton -b
-
-# exec_always --no-startup-id $HOME/.config/bin/feh-launch.sh
-# exec_always --no-startup-id $HOME/.config/bin/polybar-launch.sh
-# exec_always --no-startup-id $HOME/.config/bin/wal-launch.sh
-
 # exec --no-startup-id dunst
-# exec --no-startup-id nm-applet
-# exec --no-startup-id blueman-applet
-# exec --no-startup-id telegram-desktop -startintray
-# exec --no-startup-id jetbrains-toolbox
 # exec --no-startup-id google-chrome-stable
-
-# exec setxkbmap "us,ru" ",winkeys" "grp:alt_shift_toggle" &

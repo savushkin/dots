@@ -1,0 +1,11 @@
+[Unit]
+Description=Udiskie tray applet
+After=polybar.service
+Requires=polybar.service
+PartOf=polybar.service
+
+[Service]
+ExecStart=/usr/bin/udiskie --automount --notify --smart-tray
+
+[Install]
+WantedBy=tray.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=Telegram tray applet
+After=polybar.service
+Requires=polybar.service
+PartOf=polybar.service
+
+[Service]
+ExecStart=/usr/bin/telegram-desktop -startintray
+
+[Install]
+WantedBy=tray.target

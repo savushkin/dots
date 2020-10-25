@@ -1,0 +1,11 @@
+[Unit]
+Description=Blueman tray applet
+After=polybar.service
+Requires=polybar.service
+PartOf=polybar.service
+
+[Service]
+ExecStart=/usr/bin/blueman-applet
+
+[Install]
+WantedBy=tray.target

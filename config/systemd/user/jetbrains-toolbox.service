@@ -1,0 +1,11 @@
+[Unit]
+Description=JetBrains Toolbox tray applet
+After=polybar.service
+Requires=polybar.service
+PartOf=polybar.service
+
+[Service]
+ExecStart=/usr/local/bin/jetbrains-toolbox
+
+[Install]
+WantedBy=tray.target
