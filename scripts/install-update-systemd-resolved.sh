@@ -5,7 +5,7 @@
 EXECUTABLE=update-systemd-resolved
 DIR="/opt/update-systemd-resolved"
 
-if [ -f "/etc/openvpn/${EXECUTABLE}" ]
+if [ -f "/etc/openvpn/scripts/${EXECUTABLE}" ]
 then
 	echo "${EXECUTABLE} is already installed";
 else
