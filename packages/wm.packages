@@ -5,6 +5,7 @@ lightdm-gtk-greeter-settings
 xorg
 xserver-xorg
 i3
+i3lock
 mesa-utils
 mesa-utils-extra
 compton
