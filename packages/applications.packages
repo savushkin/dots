@@ -21,3 +21,5 @@ unzip
 unrar
 p7zip-full
 p7zip-rar
+ruby-full
+zlib1g-dev

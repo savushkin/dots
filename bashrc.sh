@@ -93,4 +93,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="${PATH}"
+export GEM_HOME="${HOME}/gems"
+export PATH="${HOME}/gems/bin:${PATH}"

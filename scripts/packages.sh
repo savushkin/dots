@@ -12,6 +12,8 @@ done 3< <(cat packages/*.packages | sort | uniq)
 
 pip3 install pywal
 
+gem install bundler
+
 for INSTALL_SCRIPT in ./scripts/install-*.sh
 do
   bash "${INSTALL_SCRIPT}" -H
