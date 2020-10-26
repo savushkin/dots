@@ -16,6 +16,8 @@ pip3 install pywal
 
 gem install bundler
 
+npm install -g @angular/cli
+
 for INSTALL_SCRIPT in ./scripts/install-*.sh
 do
   bash "${INSTALL_SCRIPT}" -H
