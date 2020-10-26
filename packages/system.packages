@@ -10,6 +10,8 @@ iptables-persistent
 pulseaudio
 pulseaudio-module-bluetooth
 pulseaudio-utils
+lm-sensors
+pulsemixer
 udiskie
 ubuntu-drivers-common
 ubuntu-restricted-extras

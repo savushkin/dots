@@ -106,6 +106,17 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
+workspace $ws1 output DP-2
+workspace $ws2 output DP-2
+workspace $ws3 output DP-2
+workspace $ws4 output DP-2
+workspace $ws5 output DP-2
+workspace $ws6 output DP-0
+workspace $ws7 output DP-0
+workspace $ws8 output DP-0
+workspace $ws9 output DP-0
+workspace $ws10 output DP-0
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2

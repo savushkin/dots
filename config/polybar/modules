@@ -83,7 +83,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = enp4s0
+interface = eno1
 interval = 3.0
 
 format-connected-prefix = " "
@@ -165,6 +165,8 @@ animation-discharging-framerate = 750
 type = internal/temperature
 thermal-zone = 4
 warn-temperature = 60
+
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
 
 format = <ramp> <label>
 format-warn = <ramp> <label-warn>
