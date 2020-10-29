@@ -70,6 +70,12 @@ modules-right = xkeyboard pulseaudio date
 [bar/top-tray]
 inherit = bar/base
 
+fixed-center = true
+
+modules-left = i3
+modules-center = xwindow
+modules-right = xkeyboard pulseaudio date
+
 tray-position = right
 tray-padding = 2
 ;tray-detached = false
