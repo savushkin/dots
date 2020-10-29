@@ -13,4 +13,7 @@ do
         echo "Start polybar-top@${MONITOR}"
         systemctl --user start "polybar-top@${MONITOR}.service"
     fi
+
+    echo "Start polybar-bottom@${MONITOR}"
+    systemctl --user start "polybar-bottom@${MONITOR}.service"
 done

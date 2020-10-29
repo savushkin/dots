@@ -11,3 +11,5 @@
 [user]
 	name = Ivan Savushkin
 	email = ivan@savushkin.me
+[core]
+	autocrlf = input
