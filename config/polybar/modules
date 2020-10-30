@@ -166,7 +166,7 @@ type = internal/temperature
 thermal-zone = 4
 warn-temperature = 60
 
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
+hwmon-path = ${env:POLYBAR_HWMON_PATH}
 
 format = <ramp> <label>
 format-warn = <ramp> <label-warn>
