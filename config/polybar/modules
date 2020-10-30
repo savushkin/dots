@@ -63,7 +63,7 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlp0s20f3
+interface = ${env:POLYBAR_WIRELESS_DEVISE}
 interval = 5.0
 format-connected = <ramp-signal> <label-connected>
 label-connected = %essid%
@@ -83,7 +83,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = eno1
+interface = ${env:POLYBAR_WIRED_DEVISE}
 interval = 3.0
 
 format-connected-prefix = " "
@@ -136,7 +136,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
-battery = BAT0
+battery = ${env:POLYBAR_BATTARY}
 adapter = AC
 full-at = 98
 format-charging = <animation-charging> <label-charging>

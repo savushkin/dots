@@ -1,4 +1,6 @@
 /tmp
-/polybar
+/environment/*
+!/environment/templates
+/config/systemd/user/*.d/
 /.idea
 *.zip

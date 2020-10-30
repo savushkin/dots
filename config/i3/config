@@ -106,16 +106,16 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
-workspace $ws1 output DP-2
-workspace $ws2 output DP-2
-workspace $ws3 output DP-2
-workspace $ws4 output DP-2
-workspace $ws5 output DP-2
-workspace $ws6 output DP-0
-workspace $ws7 output DP-0
-workspace $ws8 output DP-0
-workspace $ws9 output DP-0
-workspace $ws10 output DP-0
+workspace $ws1 output $I3_WORKSPACE_01_OUTPUT
+workspace $ws2 output $I3_WORKSPACE_02_OUTPUT
+workspace $ws3 output $I3_WORKSPACE_03_OUTPUT
+workspace $ws4 output $I3_WORKSPACE_04_OUTPUT
+workspace $ws5 output $I3_WORKSPACE_05_OUTPUT
+workspace $ws6 output $I3_WORKSPACE_06_OUTPUT
+workspace $ws7 output $I3_WORKSPACE_07_OUTPUT
+workspace $ws8 output $I3_WORKSPACE_08_OUTPUT
+workspace $ws9 output $I3_WORKSPACE_09_OUTPUT
+workspace $ws10 output $I3_WORKSPACE_10_OUTPUT
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
