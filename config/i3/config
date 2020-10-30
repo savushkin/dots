@@ -106,6 +106,17 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
+set_from_resource $I3_WORKSPACE_01_OUTPUT i3wm.workspace_01.output primary
+set_from_resource $I3_WORKSPACE_02_OUTPUT i3wm.workspace_02.output primary
+set_from_resource $I3_WORKSPACE_03_OUTPUT i3wm.workspace_03.output primary
+set_from_resource $I3_WORKSPACE_04_OUTPUT i3wm.workspace_04.output primary
+set_from_resource $I3_WORKSPACE_05_OUTPUT i3wm.workspace_05.output primary
+set_from_resource $I3_WORKSPACE_06_OUTPUT i3wm.workspace_06.output primary
+set_from_resource $I3_WORKSPACE_07_OUTPUT i3wm.workspace_07.output primary
+set_from_resource $I3_WORKSPACE_08_OUTPUT i3wm.workspace_08.output primary
+set_from_resource $I3_WORKSPACE_09_OUTPUT i3wm.workspace_09.output primary
+set_from_resource $I3_WORKSPACE_10_OUTPUT i3wm.workspace_10.output primary
+
 workspace $ws1 output $I3_WORKSPACE_01_OUTPUT
 workspace $ws2 output $I3_WORKSPACE_02_OUTPUT
 workspace $ws3 output $I3_WORKSPACE_03_OUTPUT

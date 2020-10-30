@@ -5,11 +5,11 @@ DOTS_DIR=$1
 sudo rm -rf \
 "${HOME}/.bash_aliases" \
 "${HOME}/.bashrc" \
+"${HOME}/.Xresources" \
 "${HOME}/.config/dunst" \
 "${DOTS_DIR}/config/systemd/user/polybar-bottom@.service.d" \
 "${DOTS_DIR}/config/systemd/user/polybar-top@.service.d" \
 "${DOTS_DIR}/config/systemd/user/polybar-top-tray@.service.d" \
-"${DOTS_DIR}/config/systemd/user/i3wm.service.d" \
 "/etc/lightdm/lightdm-gtk-greeter.conf" \
 "/usr/share/xsessions/systemd.desktop"
 
@@ -20,6 +20,7 @@ sudo mkdir -p /etc/lightdm
 ln -s "${HOME}/.cache/wal/dunstrc" "${HOME}/.config/dunst/dunstrc"
 ln -s "${DOTS_DIR}/bashrc.sh" "${HOME}/.bashrc"
 ln -s "${DOTS_DIR}/bash_aliases.sh" "${HOME}/.bash_aliases"
+ln -s "${DOTS_DIR}/Xresources" "${HOME}/.Xresources"
 sudo ln -s "${DOTS_DIR}/lightdm-gtk-greeter.conf" "/etc/lightdm/lightdm-gtk-greeter.conf"
 sudo ln -s "${DOTS_DIR}/config/xsessions/systemd.desktop" "/usr/share/xsessions/systemd.desktop"
 
@@ -36,12 +37,10 @@ fi
 mkdir -p "${DOTS_DIR}/config/systemd/user/polybar-bottom@.service.d"
 mkdir -p "${DOTS_DIR}/config/systemd/user/polybar-top@.service.d"
 mkdir -p "${DOTS_DIR}/config/systemd/user/polybar-top-tray@.service.d"
-mkdir -p "${DOTS_DIR}/config/systemd/user/i3wm.service.d"
 
 ln -s "${DOTS_DIR}/environment/polybar.conf" "${DOTS_DIR}/config/systemd/user/polybar-bottom@.service.d/polybar.conf"
 ln -s "${DOTS_DIR}/environment/polybar.conf" "${DOTS_DIR}/config/systemd/user/polybar-top@.service.d/polybar.conf"
 ln -s "${DOTS_DIR}/environment/polybar.conf" "${DOTS_DIR}/config/systemd/user/polybar-top-tray@.service.d/polybar.conf"
-ln -s "${DOTS_DIR}/environment/i3.conf" "${DOTS_DIR}/config/systemd/user/i3wm.service.d/i3.conf"
 
 for FILE in $(find "${DOTS_DIR}/config" ! -path "${DOTS_DIR}/config")
 do
