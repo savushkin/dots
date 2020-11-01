@@ -7,6 +7,7 @@ PartOf=i3wm.service
 [Service]
 ExecStartPre=/bin/systemctl --user stop polybar-top-tray@*.service
 ExecStartPre=/bin/systemctl --user stop polybar-top@*.service
+ExecStartPre=/bin/systemctl --user stop polybar-bottom@*.service
 
 ExecStart=%h/.config/bin/polybar-launch.sh
 ExecReload=/bin/true
