@@ -183,7 +183,7 @@ ramp-foreground = ${colors.foreground-alt}
 [module/tinkoff-invest]
 type = custom/script
 
-exec = /home/ivan/projects/personal/polybar-modules/TinkoffInvest/bin/Release/netcoreapp3.1/TinkoffInvest 2044325450
+exec = "/home/ivan/projects/personal/polybar-modules/src/TinkoffInvest/bin/Release/netcoreapp3.1/TinkoffInvest 2044325450"
 
 ; Will the script output continous content?
 ; Default: false
