@@ -1,0 +1,8 @@
+{
+  "PolybarModules": {
+    "TinkoffInvest": {
+      "Token": "TOKEN",
+      "IsSandbox": false
+    }
+  }
+}

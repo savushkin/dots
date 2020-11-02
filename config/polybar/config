@@ -88,7 +88,7 @@ inherit = bar/base
 bottom = true
 
 modules-left = wlan eth
-;modules-center = xwindow
+modules-center = tinkoff-invest
 modules-right = temperature memory cpu battery
 
 include-file = $HOME/.config/polybar/modules

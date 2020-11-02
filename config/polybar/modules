@@ -179,3 +179,16 @@ ramp-0 = 
 ramp-1 = 
 ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
+
+[module/tinkoff-invest]
+type = custom/script
+
+exec = /home/ivan/projects/personal/polybar-modules/TinkoffInvest/bin/Release/netcoreapp3.1/TinkoffInvest 2044325450
+
+; Will the script output continous content?
+; Default: false
+tail = false
+
+; Seconds to sleep between updates
+; Default: 5 (0 if `tail = true`)
+interval = 30

@@ -11,11 +11,13 @@ sudo rm -rf \
 "${DOTS_DIR}/config/systemd/user/polybar-top@.service.d" \
 "${DOTS_DIR}/config/systemd/user/polybar-top-tray@.service.d" \
 "/etc/lightdm/lightdm-gtk-greeter.conf" \
+"/etc/polybar-modules/tinkoff-invest" \
 "/usr/share/xsessions/systemd.desktop"
 
 mkdir -p "${HOME}/.config/dunst"
 
 sudo mkdir -p /etc/lightdm
+sudo mkdir -p /etc/polybar-modules/tinkoff-invest
 
 ln -s "${HOME}/.cache/wal/dunstrc" "${HOME}/.config/dunst/dunstrc"
 ln -s "${DOTS_DIR}/bashrc.sh" "${HOME}/.bashrc"
@@ -34,6 +36,11 @@ then
   cp "${DOTS_DIR}/environment/templates/polybar.template.conf" "${DOTS_DIR}/environment/polybar.conf"
 fi
 
+if [ ! -f "${DOTS_DIR}/environment/tinkoff-invest.appsettings.template.json" ]
+then
+  cp "${DOTS_DIR}/environment/templates/tinkoff-invest.appsettings.template.json" "${DOTS_DIR}/environment/tinkoff-invest.appsettings.json"
+fi
+
 mkdir -p "${DOTS_DIR}/config/systemd/user/polybar-bottom@.service.d"
 mkdir -p "${DOTS_DIR}/config/systemd/user/polybar-top@.service.d"
 mkdir -p "${DOTS_DIR}/config/systemd/user/polybar-top-tray@.service.d"
@@ -41,6 +48,8 @@ mkdir -p "${DOTS_DIR}/config/systemd/user/polybar-top-tray@.service.d"
 ln -s "${DOTS_DIR}/environment/polybar.conf" "${DOTS_DIR}/config/systemd/user/polybar-bottom@.service.d/polybar.conf"
 ln -s "${DOTS_DIR}/environment/polybar.conf" "${DOTS_DIR}/config/systemd/user/polybar-top@.service.d/polybar.conf"
 ln -s "${DOTS_DIR}/environment/polybar.conf" "${DOTS_DIR}/config/systemd/user/polybar-top-tray@.service.d/polybar.conf"
+
+sudo ln -s "${DOTS_DIR}/environment/tinkoff-invest.appsettings.json" "/etc/polybar-modules/tinkoff-invest/appsettings.json"
 
 for FILE in $(find "${DOTS_DIR}/config" ! -path "${DOTS_DIR}/config")
 do
