@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOTS_DIR=$1
+DOTS_DIR="$(realpath .)"
 
 sudo rm -rf \
 "${HOME}/.bash_aliases" \
@@ -10,6 +10,7 @@ sudo rm -rf \
 "${DOTS_DIR}/config/systemd/user/polybar-bottom@.service.d" \
 "${DOTS_DIR}/config/systemd/user/polybar-top@.service.d" \
 "${DOTS_DIR}/config/systemd/user/polybar-top-tray@.service.d" \
+"/etc/lightdm/lightdm.conf" \
 "/etc/lightdm/lightdm-gtk-greeter.conf" \
 "/etc/polybar-modules/tinkoff-invest" \
 "/usr/share/xsessions/systemd.desktop"
@@ -23,6 +24,7 @@ ln -s "${HOME}/.cache/wal/dunstrc" "${HOME}/.config/dunst/dunstrc"
 ln -s "${DOTS_DIR}/bashrc.sh" "${HOME}/.bashrc"
 ln -s "${DOTS_DIR}/bash_aliases.sh" "${HOME}/.bash_aliases"
 ln -s "${DOTS_DIR}/Xresources" "${HOME}/.Xresources"
+sudo ln -s "${DOTS_DIR}/lightdm.conf" "/etc/lightdm/lightdm.conf"
 sudo ln -s "${DOTS_DIR}/lightdm-gtk-greeter.conf" "/etc/lightdm/lightdm-gtk-greeter.conf"
 sudo ln -s "${DOTS_DIR}/config/xsessions/systemd.desktop" "/usr/share/xsessions/systemd.desktop"
 
@@ -36,7 +38,7 @@ then
   cp "${DOTS_DIR}/environment/templates/polybar.template.conf" "${DOTS_DIR}/environment/polybar.conf"
 fi
 
-if [ ! -f "${DOTS_DIR}/environment/tinkoff-invest.appsettings.template.json" ]
+if [ ! -f "${DOTS_DIR}/environment/tinkoff-invest.appsettings.json" ]
 then
   cp "${DOTS_DIR}/environment/templates/tinkoff-invest.appsettings.template.json" "${DOTS_DIR}/environment/tinkoff-invest.appsettings.json"
 fi
