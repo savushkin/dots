@@ -8,6 +8,5 @@ then
 else
 	echo "${PACKAGE} installation";
 
-	sudo apt update
-	sudo apt install -y "${PACKAGE}"
+	sudo snap install "${PACKAGE}"
 fi

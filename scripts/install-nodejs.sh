@@ -8,7 +8,7 @@ then
 else
 	echo "${PACKAGE} installation";
 
-	curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+	curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 
 	sudo apt update
 	sudo apt install -y "${PACKAGE}"

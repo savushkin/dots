@@ -4,4 +4,4 @@
 
 add-apt-repository -y ppa:graphics-drivers/ppa
 apt update
-apt install -y nvidia-driver-450
+apt install -y nvidia-driver-510

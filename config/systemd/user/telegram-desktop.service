@@ -5,7 +5,7 @@ Requires=polybar.service
 PartOf=polybar.service
 
 [Service]
-ExecStart=/usr/bin/telegram-desktop -startintray
+ExecStart=/snap/bin/telegram-desktop -startintray
 
 [Install]
 WantedBy=tray.target
