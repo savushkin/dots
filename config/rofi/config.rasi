@@ -11,5 +11,5 @@ configuration {
 	line-margin: 18;
 	separator-style: "solid";
 	hide-scrollbar: true;
-	theme: "~/.cache/wal/colors-rofi-dark.rasi";
+	@theme: "~/.cache/wal/colors-rofi-dark.rasi";
 }

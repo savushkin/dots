@@ -82,7 +82,7 @@ do
   else
     echo "create symlink for: ${CACHE_FILE}"
     rm -f "${CACHE_FILE}"
-    cp "${FILE}" "${CACHE_FILE}"
+    ln -s "${FILE}" "${CACHE_FILE}"
   fi
 done
 
