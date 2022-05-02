@@ -27,7 +27,7 @@ ln -s "${DOTS_DIR}/bash_aliases.sh" "${HOME}/.bash_aliases"
 ln -s "${DOTS_DIR}/Xresources" "${HOME}/.Xresources"
 sudo ln -s "${DOTS_DIR}/lightdm.conf" "/etc/lightdm/lightdm.conf"
 sudo ln -s "${DOTS_DIR}/lightdm-gtk-greeter.conf" "/etc/lightdm/lightdm-gtk-greeter.conf"
-sudo ln -s "${DOTS_DIR}/config/xsessions/systemd.desktop" "/usr/share/xsessions/systemd.desktop"
+sudo cp "${DOTS_DIR}/config/xsessions/systemd.desktop" "/usr/share/xsessions/systemd.desktop"
 
 if [ ! -f "${DOTS_DIR}/environment/i3.conf" ]
 then
