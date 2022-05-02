@@ -16,6 +16,7 @@ sudo rm -rf \
 "/usr/share/xsessions/systemd.desktop"
 
 mkdir -p "${HOME}/.config/dunst"
+mkdir -p "${HOME}/.cache"
 
 sudo mkdir -p /etc/lightdm
 sudo mkdir -p /etc/polybar-modules/tinkoff-invest
