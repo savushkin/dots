@@ -8,8 +8,8 @@ After=i3wm.service
 
 [Service]
 Environment=POLYBAR_MONITOR=%i
-ExecStart=/usr/local/bin/polybar top
-ExecReload=/usr/local/bin/polybar --reload top
+ExecStart=/usr/bin/polybar top
+ExecReload=/usr/bin/polybar --reload top
 
 [Install]
 WantedBy=i3wm.service
