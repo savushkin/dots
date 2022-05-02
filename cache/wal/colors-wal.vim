@@ -1,0 +1,23 @@
+" Special
+let wallpaper  = "/home/ivan/.config/background.jpg"
+let background = "#101110"
+let foreground = "#9baebd"
+let cursor     = "#9baebd"
+
+" Colors
+let color0  = "#101110"
+let color1  = "#AB4337"
+let color2  = "#E8582C"
+let color3  = "#9C4F54"
+let color4  = "#D64F45"
+let color5  = "#C08861"
+let color6  = "#3C6A8B"
+let color7  = "#9baebd"
+let color8  = "#6c7984"
+let color9  = "#AB4337"
+let color10 = "#E8582C"
+let color11 = "#9C4F54"
+let color12 = "#D64F45"
+let color13 = "#C08861"
+let color14 = "#3C6A8B"
+let color15 = "#9baebd"

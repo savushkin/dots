@@ -70,6 +70,22 @@ do
   fi
 done
 
+for FILE in $(find "${DOTS_DIR}/cache" ! -path "${DOTS_DIR}/cache")
+do
+  CACHE_FILE=${FILE/${DOTS_DIR}\/cache/${HOME}\/.cache}
+  echo "${CACHE_FILE}"
+  if [ -d "${FILE}" ]
+  then
+    echo "renew directory: ${CACHE_FILE}"
+    rm -rf "${CACHE_FILE}"
+    mkdir -p "${CACHE_FILE}"
+  else
+    echo "create symlink for: ${CACHE_FILE}"
+    rm -f "${CACHE_FILE}"
+    ln -s "${FILE}" "${CACHE_FILE}"
+  fi
+done
+
 systemctl --user daemon-reload
 systemctl --user enable \
 i3wm.service \

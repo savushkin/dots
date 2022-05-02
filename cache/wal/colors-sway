@@ -1,0 +1,21 @@
+set $wallpaper /home/ivan/.config/background.jpg
+
+set $background #101110
+set $foreground #9baebd
+
+set $color0 #101110
+set $color1 #AB4337
+set $color2 #E8582C
+set $color3 #9C4F54
+set $color4 #D64F45
+set $color5 #C08861
+set $color6 #3C6A8B
+set $color7 #9baebd
+set $color8 #6c7984
+set $color9 #AB4337
+set $color10 #E8582C
+set $color11 #9C4F54
+set $color12 #D64F45
+set $color13 #C08861
+set $color14 #3C6A8B
+set $color15 #9baebd
