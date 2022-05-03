@@ -17,6 +17,7 @@ sudo rm -rf \
 
 mkdir -p "${HOME}/.config/dunst"
 mkdir -p "${HOME}/.cache"
+mkdir -p "${HOME}/Pictures/Screenshots"
 
 sudo mkdir -p /etc/lightdm
 sudo mkdir -p /etc/polybar-modules/tinkoff-invest
