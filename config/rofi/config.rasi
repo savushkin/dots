@@ -12,3 +12,5 @@ configuration {
 	separator-style: "solid";
 	hide-scrollbar: true;
 }
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
