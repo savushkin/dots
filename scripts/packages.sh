@@ -7,15 +7,17 @@ export DOCKER_USER=$1
 apt update
 apt upgrade -y
 
-#while read -u3 PACKAGE
-#do
-#  apt install --no-install-recommends --yes "${PACKAGE}"
-#done 3< <(cat packages/*.packages | sort | uniq)
+while read -u3 PACKAGE
+do
+  apt install --yes "${PACKAGE}"
+done 3< <(cat packages-without-recommends/*.packages | sort | uniq)
 
-#pip3 install pywal
+while read -u3 PACKAGE
+do
+  apt install --no-install-recommends --yes "${PACKAGE}"
+done 3< <(cat packages/*.packages | sort | uniq)
 
 gem install bundler
-
 
 for INSTALL_SCRIPT in ./scripts/install-*.sh
 do

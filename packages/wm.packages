@@ -1,5 +1,4 @@
 x11-apps
-lightdm
 lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
 xorg
