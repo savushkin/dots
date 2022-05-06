@@ -9,12 +9,12 @@ apt upgrade -y
 
 while read -u3 PACKAGE
 do
-  apt install --yes "${PACKAGE}"
+  apt install --no-install-recommends --yes "${PACKAGE}"
 done 3< <(cat packages-without-recommends/*.packages | sort | uniq)
 
 while read -u3 PACKAGE
 do
-  apt install --no-install-recommends --yes "${PACKAGE}"
+  apt install --yes "${PACKAGE}"
 done 3< <(cat packages/*.packages | sort | uniq)
 
 gem install bundler
