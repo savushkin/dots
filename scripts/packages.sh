@@ -4,6 +4,10 @@
 
 export DOCKER_USER=$1
 
+add-apt-repository --yes universe
+add-apt-repository --yes restricted
+add-apt-repository --yes multiverse
+
 apt update
 apt upgrade -y
 
