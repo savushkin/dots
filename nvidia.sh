@@ -4,5 +4,5 @@
 
 add-apt-repository -y ppa:graphics-drivers/ppa
 apt update
-apt install --no-install-recommends --yes nvidia-driver-510
+apt install --no-install-recommends --yes nvidia-driver-520
 apt install --yes nvidia-settings
